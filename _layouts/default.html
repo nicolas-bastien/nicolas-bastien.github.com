@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ page.url | canonical }}" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/assets/css/styles.css?version=20130317" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+      <!--<link rel="apple-touch-icon" href="images/apple-touch-icon.png">-->
+      <!--<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">-->
+      <!--<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+</head>
+<body>
+    <header class="">
+        <a href="https://github.com/nicolas-bastien">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="/assets/img/layout/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        <div class="container">
+            <div id="title">
+                <a href="/" title="Lead Developper Symfony2">Nicolas Bastien</a>
+            </div>
+            <nav class="main-nav">
+                <ul id="menu-main-nav" class="menu">
+                    <li class=""><a href="{{ url('_home') }}">Home</a></li>
+                    <li class=""><a href="{{ url('_home') }}">Symfony 2</a></li>
+                    <li class=""><a href="{{ url('_home') }}">Web Development</a></li>
+                    <li class=""><a href="{{ url('_portfolio') }}">Portofolio</a></li>
+                    <li class=""><a href="{{ url('_about') }}">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="page-title">
+        <div id="page-title-content" class="container">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.title_legend }}</p>
+        </div>
+    </div>
+    <div id="breadcrumb-container-outer">
+        <div id="breadcrumb-container">
+            <div class="breadcrumb-container-border"></div>
+            <div id="breadcrumb" class="container">
+                <nav class="breadcrumbs">
+                    <li><a href="/"><i class="icon-home"></i>Home</a> </li>
+                    {% assign crumbs = page.url | split: '/' %}
+                    {% assign crumbstotal = crumbs | size %}
+                    {% for crumb in crumbs offset:2 %}
+                    {% unless crumb == 'index.html' %}
+                    <li><span class="divider">&#187;</span> {{ crumb | remove: '.html' }} </li>
+                    {% endunless %}
+                    {% endfor %}
+                </nav>
+            </div>
+            <div class="breadcrumb-container-border"></div>
+        </div>
+    </div>
+    <div id="page-container-outer">
+        <div id="page-container" class="container">
+            <div class="row">
+                <div id="main-content" class="span9">
+                    {{ content }}
+                </div>
+                <div class="span3">
+                    <div id="sidebar">
+                        <div class="block">
+                            <h4>About Me</h4>
+                            <div class="block-content">
+                                <div class="img-container">
+                                    <img src="/assets/img/sidebar/developpeur-web-lyon.jpg" title="Nicolas Bastien - Lead developer Symfony 2">
+                                </div>
+                                <p>Nicolas Bastien, lead developer Symfony 2 at Prestaconcept in Lyon.</p>
+                                <a href="/about.html" class="link">...more...</a>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <h4>Last Articles</h4>
+                            <div class="block-content">
+                                {% for post in site.posts limit:3 offset:0 %}
+                                <h5>{{ post.title|trans }}</h5>
+                                <p>{{ post.description|trans|slice(0, 50) }}...</p>
+                                <a class="link-inline" href="{{ post.url }}">...more...</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-container-outer">
+        <div id="footer-top-container">
+            <div class="container">
+                <p>Lead Developer Symfony 2 Lyon</p>
+            </div>
+        </div>
+        <div id="footer-container">
+            <div class="container">
+                <div class="row">
+                    <div class="span4 company-block">
+                        <h3>My company</h3>
+                        <div>
+                            <h4>PrestaConcept</h4>
+                            <div class="content">
+                                <p>PrestaConcept is a small company specialised in specific web developement. Expert on PHP technologies and Symfony.</p>
+                                <a class="link" target="_blank" href="http://www.prestaconcept.net" title="symfony development 2 lyon">... go to website ...</a>
+                            </div>
+                        </div>
+                        <h3>Blog webmarteting</h3>
+                        <div class="content">
+                            <p>French blog about Webmarketing and SEO.</p>
+                            <a class="link" target="_blank" href="http://www.webmarketing-et-referencement.fr/" title="symfony development 2 lyon">... go to website ...</a>
+                        </div>
+                        <h3>Technical blog</h3>
+                        <div class="content">
+                            <p>Articles about PHP and Symfony par PrestaConcept.</p>
+                            <a class="link" target="_blank" href="http://blog.prestaconcept.net/" title="symfony development 2 lyon">... go to website ...</a>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <h3>Laste articles</h3>
+                        <ul id="footer-lastest-articles">
+                            {% for post in site.posts limit:3 offset:0 %}
+                            <li>
+                                <a href="{{ post.url }}">
+                                    <h5>{{ post.title|trans }}</h5>
+                                    <p>{{ post.description|trans }}</p>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="span4 links-block">
+                        <h3>Follow me</h3>
+                        <p><a class="github" href="https://github.com/nicolas-bastien" target="_blank" title="follow me on Github">Fork me on Github</a></p>
+                        <p><a class="rss" href="http://feeds.feedburner.com/NicolasBastien" target="_blank" title="RSS Feed">RSS Feed</a></p>
+                        <p><a class="viadeo" href="http://fr.viadeo.com/fr/profile/nbastien1" target="_blank" title="My viadeo">Viadeo</a></p>
+                        <p><a class="linkedin" href="http://www.linkedin.com/pub/nicolas-bastien/32/95b/684" target="_blank" title="My LinkedIn">LinkedIn</a></p>
+                        <p><a class="contact" href="mailto:nbastien.pro@gmail.com" title="Contact me">Contact me</a></p>
+                        <p><a class="sensioconnect" href="https://connect.sensiolabs.com/profile/nicolas_bastien" target="_blank" title="My SensioConnect">SensioConnect</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright-container">
+            <div class="container">
+                <div class="row">
+                    <div id="footer-copyright" class="span8">
+                        Copyright &copy;2012 - 2013 Nicolas-Bastien
+                        <a class="link-inline" href="{{ url('_home') }}">Lead Developer Symfony 2 Lyon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% unless site.ga_id == nil or site.ga_id == empty %}
+                DEV
+    {% endunless %}
+</body>
+</html>
