@@ -1,0 +1,80 @@
+
+@lightBackground: #F3F0E5;
+
+@import "base.less";
+
+@import "../bootstrap/less/reset.less";
+@import "../bootstrap/less/type.less";
+@import "../bootstrap/less/thumbnails.less";
+@import "layout.less";
+@import "utils.less";
+@import "typo.less";
+//@import "layout_large.less";
+//@import "home.less";
+
+@import "contact.less";
+
+img.img-flol {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+div.summary {
+  clear: both;
+  border-left: 15px solid #69F;
+  background: #DEF;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: #000;
+}
+div.summary ul {
+  list-style: circle;
+  list-style-position: inside;
+  margin-left: 20px;
+}
+p.note {
+  border-left: 15px solid #e3ff0f;
+  background: #ffff87;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: #000;
+}
+h3, h3 a {
+  color: @backgroundBlue;
+  clear: both;
+}
+ul.main-menu {
+  list-style: none;
+
+  img.thumbnail {
+    float: left;
+    margin: 5px 25px 10px 5px;
+  }
+  div.date {
+    text-align: right;
+    font-style: italic;
+    font-size: 13px;
+    color: @backgroundBlueLight;
+  }
+}
+
+ul.screenshot img {
+  width: 150px;
+  height: 150px;
+}
+
+a {
+  color: #75818A;
+  font-weight: bold;
+}
+a:hover {
+  color: #192D3C;
+}
+a p {
+  font-weight: normal;
+}
+
+
+#footer-container .container {
+  background: url("/assets/img/badges/badges-bg.png") no-repeat scroll bottom right transparent;
+}

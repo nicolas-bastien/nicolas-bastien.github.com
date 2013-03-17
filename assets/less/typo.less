@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Covered By Your Grace';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Covered By Your Grace'), local('CoveredByYourGrace'),
+       url('/assets/font/CoveredByYourGrace.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: LatoLight;
+  src: local('Lato-Light'), local('LatoLight'),
+       url('/assets/font/Lato-Light-webfont.eot'),
+       url('/assets/font/Lato-Light-webfont.woff') format('woff'),
+       url('/assets/font/Lato-Light-webfont.ttf') format('truetype');
+}
+@titleFont: 'Covered By Your Grace', cursive;
+
+h1, h2, h3 {
+  font-family: @titleFont;
+  letter-spacing:2px;
+}
+#page-container {
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+h3 {
+  color: @backgroundBlue;
+}
+
+a {
+  text-decoration: none;
+}
+a.link, a.link-inline {
+  color: #75818A;
+  font-weight: bold;
+  font-family: @titleFont;
+  margin-top: 10px;
+  float: right;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+a.link:hover, a.link-inline:hover {
+  color: #fff;
+  text-shadow: 0px 1px 5px #000;
+  text-decoration: none;
+  background-color: #213B4E;
+}
+a.link-inline {
+  float: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+a.github, a.contact, a.resume, a.rss, a.viadeo, a.linkedin, a.sensioconnect {
+  color: #333;
+  padding: 25px 15px 5px 40px;
+  font-weight: bold;
+}
+a.github {
+  background: url("/assets/img/icons/github-32.png") no-repeat 0px 15px transparent;
+}
+a.resume {
+  background: url("/assets/img/icons/resume-32.png") no-repeat 0px 15px transparent;
+}
+a.contact {
+  background: url("/assets/img/icons/contact-32.png") no-repeat 0px 15px transparent;
+}
+a.rss {
+  background: url("/assets/img/icons/rss-32.png") no-repeat 0px 15px transparent;
+}
+a.viadeo {
+  background: url("/assets/img/icons/viadeo-32.png") no-repeat 0px 15px transparent;
+}
+a.linkedin {
+  background: url("/assets/img/icons/linkedin-32.png") no-repeat 0px 15px transparent;
+}
+a.sensioconnect {
+  background: url("/assets/img/icons/sensioconnect-32.png") no-repeat 0px 15px transparent;
+}
+
+
+h2 {
+  clear: both;
+  color: @backgroundBlue;
+//  font-family: LatoLight;
+  font-size: 36px;
+  line-height: 1.16666667;
+  font-weight: normal;
+//  border-bottom: 1px solid @backgroundBlue;
+  margin-bottom: 15px;
+}
+h2.subheading {
+  margin-bottom: 0px;
+}
+p.subheading {
+  color: #808080;
+  font-size: 15px;
+}

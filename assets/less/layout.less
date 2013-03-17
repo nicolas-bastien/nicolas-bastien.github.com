@@ -1,0 +1,272 @@
+
+body {
+  background: url("/assets/img/layout/body-bg.png") repeat scroll top left #034462;
+  background-color: #034462;
+  font-family: "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin: 0px;
+}
+html {
+  -webkit-text-size-adjust: none;
+}
+
+@backgroundBlue: #192d3c;
+@backgroundBlueLight: #0079a0;
+
+// HTML5 invalid states
+// Shares styles with the .control-group.error above
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color:  @backgroundBlue;
+  border-color:  @backgroundBlueLight;
+  &:focus {
+    border-color: darken(@backgroundBlueLight, 10%);
+    @shadow: 0 0 6px lighten(@backgroundBlueLight, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+header {
+  color: #C0D3DC;
+  padding: 15px 0 0;
+
+  background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgba(0,136,178,1)),to(rgba(0,136,178,0)));
+  background-image:-webkit-linear-gradient(left,rgba(0,136,178,0) 0%,rgba(0,136,178,1) 50%,rgba(0,136,178,0) 100%);
+  background-image:   -moz-linear-gradient(left,rgba(0,136,178,0) 0%,rgba(0,136,178,1) 50%,rgba(0,136,178,0) 100%);
+  background-image:    -ms-linear-gradient(left,rgba(0,136,178,0) 0%,rgba(0,136,178,1) 50%,rgba(0,136,178,0) 100%);
+  background-image:     -o-linear-gradient(left,rgba(0,136,178,0) 0%,rgba(0,136,178,1) 50%,rgba(0,136,178,0) 100%);
+  background-image:        linear-gradient(left,rgba(0,136,178,0) 0%,rgba(0,136,178,1) 50%,rgba(0,136,178,0) 100%);
+  background-image:-webkit-radial-gradient(top center,rgba(0,136,178,1),rgba(0,136,178,0));
+  background-image:   -moz-radial-gradient(top center,rgba(0,136,178,1),rgba(0,136,178,0));
+  background-image:    -ms-radial-gradient(top center,rgba(0,136,178,1),rgba(0,136,178,0));
+  background-image:     -o-radial-gradient(top center,rgba(0,136,178,1),rgba(0,136,178,0));
+  background-image:        radial-gradient(top center,rgba(0,136,178,1),rgba(0,136,178,0));
+
+  #title {
+    margin: 0;
+    padding: 0;
+    float: left;
+
+    a {
+      letter-spacing:2px;
+      text-decoration: none;
+      font-size: 40px;
+      font-family: @titleFont;
+      font-weight: bold;
+      color: #fffe07;
+      float: left;
+//      width: 250px;
+      height: 40px;
+      text-shadow: 0px 1px 5px #000000;
+    }
+    a:hover {
+      text-decoration: none;
+      text-shadow: 0px 2px 7px #000000;
+    }
+  }
+
+/* Navigation
+------------------------------------------------------------ */
+  nav {
+    float: right;
+    margin-bottom: 5px;
+    ul {
+      margin: 0px;
+    }
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 17px 0px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Arial Narrow", 'Open Sans', Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.38em;
+        font-size: 13px;
+        padding: 14px;
+      }
+      a:hover {
+        color: #FFF;
+        text-decoration: none;
+        text-shadow: 0px 1px 5px #000000;
+      }
+    }
+    li:last-child a {
+      margin-right: 0;
+    }
+    li:hover {
+      background-color: rgba(81, 78, 73, 0.3);
+      .border-radius(5px);
+    }
+  }
+}
+
+#page-title {
+  background: url("/assets/img/layout/header-shadow.png") no-repeat scroll top center transparent;
+  color: #81A3B2;
+  padding-top: 10px;
+
+  h1 {
+    color: #FFF;
+    font-family: @titleFont;
+    letter-spacing:2px;
+    text-align: right;
+    text-shadow: 0px 1px 5px #000;
+  }
+  p {
+    text-align: right;
+    font-style: italic;
+  }
+}
+/*************************************
+    Footer
+*************************************/
+#footer-container-outer {
+  background: url("/assets/img/layout/footer-bg.png") no-repeat scroll bottom right #192d3c;
+  clear: both;
+  z-index:200;
+}
+#footer-top-container {
+  p {
+    padding-top: 10px;
+    font-family: @titleFont;
+    letter-spacing:2px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 0px 1px 5px #000;
+  }
+}
+#footer-container {
+  background: url("/assets/img/layout/header-shadow.png") no-repeat scroll top center transparent;
+  padding-top: 10px;
+
+  p {
+    color: #C5CACE;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-style: italic;
+  }
+  h4,h5 {
+    color: #FFF;
+  }
+  .company-block {
+    background: url("/assets/img/layout/logo-prestaconcept.png") no-repeat scroll bottom right transparent;
+    pdiing-bottom: 35px;
+  }
+  .content {
+  //    background-color: #213B4E;
+  //    opacity: 0.5;
+    padding: 0px 10px;
+
+  }
+  #footer-lastest-articles {
+    margin: 0px;
+
+    h4 {
+      margin: 0px;
+    }
+    li {
+      list-style-type: none;
+
+
+      border-bottom: 1px solid #FFF;
+      a {
+
+        text-decoration: none;
+      }
+      p {
+        padding: 5px;
+        background-color: #213B4E;
+        -moz-border-radius: 25px 10px / 10px 25px;
+        border-radius: 25px 10px / 10px 25px;
+      }
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+
+  }
+  div.links-block {
+    p {
+      padding-bottom: 10px;
+      padding-left: 5px;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #FFF;
+    }
+    a:hover {
+      color: #75818A;
+    }
+  }
+}
+
+#footer-copyright {
+  font: italic 12px/18px Georgia, sans-serif;
+  color: #75818A;
+  padding: 10px 0px;
+  margin-bottom: 35px;
+  background: #0D121F;
+  -moz-border-radius: 25px 10px / 10px 25px;
+  border-radius: 25px 10px / 10px 25px;
+  text-align: center;
+}
+#footer-container-outer h3 {
+  color: #75818A;
+  text-shadow: 0px 1px 5px #000;
+}
+
+#breadcrumb-container-outer {
+  background: #FFF;
+  font: italic 12px/18px Georgia, sans-serif;
+  padding-top: 5px;
+}
+#page-container-outer {
+  background: #FFF;
+  min-height: 250px;
+  padding-top: 15px;
+}
+
+#sidebar {
+  border-left: 1px solid #E1E1E1;
+  .block {
+    color: #192D3C;
+
+    h4 {
+      color: #192D3C;
+      margin: 0px;
+      text-transform: capitalize;
+      font-family: @titleFont;
+      letter-spacing:2px;
+      font-size: 22px;
+      padding: 10px 15px;
+    }
+    .block-content {
+      padding: 0px 15px;
+    }
+    h5 {
+      font-family: LatoLight;
+    }
+  }
+}
+
+
+div.intro {
+  font-family: LatoLight;
+  overflow: hidden;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #E1E1E1;
+  background: #f4f4f4;
+  padding: 25px;
+  .border-radius(5px);
+}
+
+

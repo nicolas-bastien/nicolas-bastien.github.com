@@ -1,0 +1,51 @@
+
+div.contact-row {
+  background: url("/assets/img/contact/contact-bg.png") no-repeat bottom left transparent;
+}
+
+div.contact-info {
+  border-left: @btnBackground 5px solid;
+  background-color: #F0F0F0;
+  padding: 25px;
+  margin-bottom: 25px;
+
+  p {
+    text-align: justify;
+  }
+}
+
+form div.form-actions {
+  background-color: transparent;
+  border-top: none;
+  text-align: right;
+
+  input {
+    margin-right: 10px;
+    font: 20px/31px @titleFont;
+    letter-spacing:2px;
+    text-shadow: -1px -1px 0 black;
+//    color: #FFF;
+  }
+  input:hover {
+//    color: #A2CD79;
+  }
+}
+form ul {
+  list-style: none;
+  text-align: right;
+}
+input[type="submit"] {
+  text-transform: capitalize;
+}
+
+form.contact {
+  clear: both;
+  label {
+    font-weight: bold;
+    vertical-align: top;
+    padding-top: 5px;
+    text-transform: capitalize;
+  }
+  input[type="text"],input[type="email"] { width: 500px; line-height: 26px;  min-height: 26px; }
+  textarea { width: 500px; height: 150px; line-height: 26px;  }
+}
